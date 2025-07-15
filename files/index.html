@@ -13,7 +13,11 @@
 
         body{
             margin: auto;
-            /* width: 80vw; */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0px;
         }
 
         :root{
@@ -27,6 +31,9 @@
 
             --help-bg:gainsboro;
             --footer-bg:darkgrey;
+
+            --normal-img-width: 400px;
+            --reduced-img-width: 200px;
         }
 
         header{
@@ -63,38 +70,52 @@
         }
 
         li{
-            padding-right: 16px;
+            margin-right: 16px;
             list-style: none;
         }
 
         li:hover{
-            color: var(--tertiary-color);
+            color: var(--secondary-color);
+            background-color: var(--primary-color);
+            border-radius: 4px;
+            padding: 4px;
+            margin-right: 8px;
         }
 
-        /* main h1{
-            background-color: var(--primary-color);
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding: 20px;
-        } */
+        main{
+            width: 100vw;
+        }
 
         section{
             display: flex;
             justify-content: space-around;
-            padding: 40px;
             flex-wrap: wrap;
             gap: 20px;
+            padding: 40px 0px;
             background-color: var(--primary-color);
         }
 
+        @media screen and (width >= 450px){
+            section .box{
+                width: 400px;
+                height: 300px;
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (width < 450px){
+            section .box{
+                width: 200px;
+                height: 150px;
+                font-size: 12px;
+            }
+        }
+
         section .box{
-            width: 400px;
-            height: 300px;
             border: 2px solid black;
             flex: none;
             border-radius: 8px;
             text-align: center;
-            font-size: 24px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
@@ -161,6 +182,7 @@
         }
 
         footer{
+            margin-top: auto;
             padding: 20px;
             background-color: var(--footer-bg);
             text-align: center;
@@ -210,7 +232,7 @@
     <div class="help">
         <button>
             <div class="text">How may I help you?</div>
-            <img src="Mosh.png" >
+            <img src="Mosh.png" alt="Chatbot Image">
         </button>
     </div>
 
