@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: auto;
+            /* width: 80vw; */
+        }
+
+        :root{
+            --primary-color: rgb(172, 255, 139);
+            --secondary-color: rebeccapurple;
+            --tertiary-color: cyan;
+
+            --target-bg-1:rgb(148, 124, 255);
+            --target-bg-2:rgb(255, 124, 124);
+            --quote-bg:rgb(253, 241, 217);
+
+            --help-bg:gainsboro;
+            --footer-bg:darkgrey;
+        }
+
+        header{
+            display: flex;
+            position: sticky;
+            top : 0px;
+            /* padding: 8px; */
+        }
+        
+        .logo{
+            /* margin-right: auto; */
+            flex: 1 1 auto;
+            font-family: cursive, sans-serif;
+            font-size: 24px;
+            color: var(--secondary-color);
+            background-color: var(--tertiary-color);
+            padding: 8px;
+            text-align: center;
+        }
+
+        nav{
+            color: var(--primary-color);
+            background-color: var(--secondary-color);
+            flex: 10 1 auto;
+            padding: 8px;
+        }
+
+        nav ul{
+            display: flex;
+            height: 100%;
+            font-size: 20px;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        li{
+            padding-right: 16px;
+            list-style: none;
+        }
+
+        li:hover{
+            color: var(--tertiary-color);
+        }
+
+        /* main h1{
+            background-color: var(--primary-color);
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+        } */
+
+        section{
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: var(--primary-color);
+        }
+
+        section .box{
+            width: 400px;
+            height: 300px;
+            border: 2px solid black;
+            flex: none;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 24px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        section .box img{
+            width: 100%;
+        }
+
+        section .box:nth-child(1){
+            background-color:var(--target-bg-1)
+        }
+        
+        section .box:nth-child(2){
+            background-color:var(--target-bg-2)
+        }
+
+        .quote{
+            width: 70vw;
+            margin: 40px auto;
+            padding: 5vw;
+            border-radius: 8px;
+            background-color:var(--quote-bg);
+            font-size: 20px;
+        }
+
+        .author{
+            text-align: right;
+        }
+
+        .help{
+            position:fixed;
+            right: 5px;
+            bottom: 5px;
+        }
+
+        .help button{
+            display: flex;
+            background-color: transparent;
+            border: 0px;
+        }
+
+        .help button:hover{
+            border-radius: 12px;
+            background-color: var(--help-bg);
+        }
+
+        .help .text{
+            height: 30px;
+            display: inline;
+            padding: 6px;
+            background-color: var(--help-bg);
+            border-radius: 8px;
+            margin-top: 25px;
+            z-index: 1;
+            color: var(--secondary-color);
+            font-family: cursive;
+        }
+
+        .help img{
+            width: 80px;
+            border: 8px solid var(--help-bg);
+            border-radius: 50%;
+            align-self: flex-end;
+            margin-left: -8px;
+        }
+
+        footer{
+            padding: 20px;
+            background-color: var(--footer-bg);
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Website</div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <h1>Targets</h1> -->
+        <section>
+            <div class="box">
+                <img src="Valorant_EP8_Teaser_Omen and the Outlaw.png" alt="Omen and the Outlaw">
+
+                Omen and the Outlaw<br>
+                <em>Valorant HQ</em>
+            </div>
+            <div class="box">
+                <img src="Valorant_EP8_Teaser_Cypher Reborn.jpg" alt="Cypher Reborn">
+                Cypher Reborn<br>
+                <em>Bind</em>
+            </div>
+        </section>
+
+        <div class="quote">
+            <q><em>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quos saepe dolorem minima ducimus vero perspiciatis autem repellat sapiente a temporibus fugiat nam placeat nobis explicabo architecto, nulla labore quaerat, quis amet consequatur. Laborum dolorum possimus eaque esse mollitia eos qui cum nulla dicta blanditiis debitis voluptatem cumque sapiente aperiam, quos hic temporibus placeat assumenda tempore et molestias amet tenetur ipsum! Natus qui aspernatur enim iste, et ipsam nostrum!
+            </em></q>
+            <div class="author">
+            -- Awadh Ojha
+            </div>
+        </div>
+    </main>
+
+    <div class="help">
+        <button>
+            <div class="text">How may I help you?</div>
+            <img src="Mosh.png" >
+        </button>
+    </div>
+
+    <footer>
+        &copy; Code With Harry
+    </footer>
+</body>
+</html>
